@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   def show
-    @book=Book.new
     @user=User.find(params[:id])
+    @book=Book.new
+
     @books=Book.where(user_id: @user.id)
   end
 

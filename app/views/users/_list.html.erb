@@ -15,7 +15,13 @@
       <th><%= user.introduction %></th>
     </tr>
     <tr>
+      <% if @user == current_user %>
+
+
       <th class="btn btn-light w-100"><%= link_to  edit_user_path(current_user)  do %><i class="fas fa-user-cog"></i><%end%></th>
+      <% else %>
+      <th class="btn btn-light w-100"><%= link_to  edit_user_path(@user.id) do %><i class="fas fa-user-cog"></i><%end%></th>
+      <% end%>
     </tr>
   </tbody>
 

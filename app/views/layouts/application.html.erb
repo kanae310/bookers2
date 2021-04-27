@@ -11,7 +11,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column vh-100">
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -43,11 +43,11 @@
         <a class= 'nav-list text-light p-3' href="/home/about" ><i class="fas fa-link"></i>About</a>
       </li>
       <li class="nav-item">
-        <%= link_to  new_user_registration_path, class: 'nav-list text-light p-3' do %><i class="fas fa-user-plus"></i>Sign Up<%end%>
+        <%= link_to  new_user_registration_path, class: 'nav-list text-light p-3' do %><i class="fas fa-user-plus"></i>sign up<%end%>
       </li>
 
       <li class="nav-item">
-        <%= link_to  new_user_session_path, class: 'nav-list text-light p-3' do%><i class="fas fa-sign-in-alt"></i>Login<%end%>
+        <%= link_to  new_user_session_path, class: 'nav-list text-light p-3' do%><i class="fas fa-sign-in-alt"></i>login<%end%>
       </li>
     <% end %>
     </ul>
@@ -55,11 +55,13 @@
     </div>
     </nav>
     </header>
+    <main class="body">
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <main class=md-auto>
 
     <%= yield %>
+
     </main>
     <footer>
       <p class="text-center p-30-0">CopyRight Infratop.inc</p>

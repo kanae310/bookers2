@@ -1,4 +1,6 @@
-<h1>User Info</h1>
+ <div class="row">
+   <div class="col-md-3">
+ <h1>User Info</h1>
 
 <%= form_for(@user) do |f| %>
 
@@ -20,6 +22,5 @@
 <%= f.text_area :introduction %></br>
 <%= f.submit "Update User",class:"btn btn-success" %>
 <%end%>
-<%= link_to "Show", book_path(@book.id) %>
-|
-<%= link_to "Back", books_path %>
+</div>
+</div>
